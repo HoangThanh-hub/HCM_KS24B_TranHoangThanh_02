@@ -135,10 +135,10 @@ const editBookByName= (name) => {
     let newCategory = prompt("Nhập thể loại mới:", book.category);
 
     // cập nhật
-    book.name = newName || book.name;
-    book.author = newAuthor || book.author;
-    book.year = newYear || book.year;
-    book.category = newCategory || book.category;
+    book.name = newName;
+    book.author = newAuthor;
+    book.year = newYear;
+    book.category = newCategory;
 
     displayBookList(listBook);
 };
