@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book_manager</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+</head>
+<body>
+
+    <!-- tiêu đề -->
+<header style="width: 1440px;height: 119.88px; background-color:#2C3E50;">
+    <p style="width: 1000px;height: 37px;padding: 41.44px;padding-left: 532.41px;font-size: 31.88px;font-weight: 700;color: white;">Quản Lý Danh Mục Sách</p>
+</header>
+
+<!-- ô vuong lớn -->
+<div style="width: 1440px;background-color:#ECF0F1;margin-top: 0px;height: 800px;padding-top: 30px;">
+    <!-- ô vuông nhỏ -->
+    <div style="width: 1040px;margin-left: 200px;background-color: white;border-radius: 10px;">
+        <!-- form điền thêm sách -->
+        <div style="margin-left: 20px;padding-top: 10px;" id="form">
+            <div class="mb-3 row">
+                <label  class="col-sm-2 col-form-label">Tên sách:</label>
+                <div class="col">
+                  <input type="text" class="form-control" id="name" style="width: 825px;">
+                  <span id="error_name" style="color:red;"></span>
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label class="col-sm-2 col-form-label">Tên tác giả:</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="author" style="width: 825px;">
+                  <span id="error_author" style="color:red;"></span>
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label class="col-sm-2 col-form-label">Năm xuất bản:</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="year" style="width: 825px;">
+                  <span id="error_year" style="color:red;"></span>
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label class="col-sm-2 col-form-label">Thể loại</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="category" style="width: 825px;">
+                  <span id="error_category" style="color:red;"></span>
+                </div>
+            </div>
+            <!-- button -->
+                <button class="btn " style="width: 1000px;background-color: #3498DB;color: white;" onclick="addBook()">Thêm sách</button>
+        
+        </div>
+        <!-- tìm kiếm -->
+        <div >
+            <input type="text" placeholder="Tìm kiếm theo tên sách..."  style="width: 1000px;margin-left: 20px;margin-top: 30px;height: 50px;" id="search" >
+        </div>
+
+        <!-- hieenr thi -->
+         <div style="width: 1000px; margin-left: 20px;margin-top: 20px;">
+             <table class="table table-bordered">
+                 <thead style="text-align: center;">
+                 <tr>
+                     <th scope="col">Tên sách</th>
+                     <th scope="col">Tác giả</th>
+                     <th scope="col">Năm</th>
+                     <th scope="col">Thể loại</th>
+                     <th scope="col-2">Hành động</th>
+                 </tr>
+                 </thead>
+                 <tbody id="list" >
+                 
+                 </tbody>
+             </table>
+         </div>
+    </div>
+</div>
+
+    <script src="./main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>
+</html> 
